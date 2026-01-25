@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="music_player.css">
+    <title>Tanmo Music</title>
+</head>
+
+<body>
+
+    <main class="headbar">
+
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="tanmo">
+            <h1>TANMO</h1>
+        </div>
+
+        <div class="navbar">
+            <ul>
+                <li><a href="music_player.html">Home</a></li>
+                <li><a href="albums.html">Albums</a></li>
+                <li><a href="favourites.html">Favourites</a></li>
+                <li><a href="playlists.html">Playlists</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="searchbar">
+            <input type="text" placeholder="Search music...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+    </main>
+
+    <div class="side-nav" id="sideNav">
+        <i class="fa-solid fa-xmark close-btn" onclick="toggleMenu()"></i>
+        <a href="music_player.html">Home</a>
+        <a href="albums.html">Albums</a>
+        <a href="favourites.html">Favourites</a>
+        <a href="playlists.html">Playlists</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="music-container">
+
+        <h2>🎧 For You</h2>
+
+        <ul class="music-list" id="musicList">
+            <li onclick="loadSong(0)">Halet Hob</li>
+            <li onclick="loadSong(1)">Agar Tum Benaqab Aye</li>
+            <li onclick="loadSong(2)">Khalouni</li>
+            <li onclick="loadSong(3)">Dilbaro</li>
+            <li onclick="loadSong(4)">Gardishe Chashme Siyahi Tu Khushame Ayat</li>
+            <li onclick="loadSong(5)">𝐓𝐞𝐫𝐚 𝐌𝐞𝐫𝐚 𝐇𝐚𝐢 𝐏𝐲𝐚𝐫 𝐀𝐦𝐚𝐫❤️</li>
+            <li onclick="loadSong(6)">Tumhe Kya Batau k Tum Mere Kya Ho</li>
+            <li onclick="loadSong(7)">Patimat Rasulova</li>
+        </ul>
+
+        <audio id="audio" src="./Sur.com/">
+
+        </audio>
+
+        <div class="time">
+            <span id="currentTime">0:00</span>
+            <span id="duration">0:00</span>
+        </div>
+
+        <input type="range" id="progress" class="slider" value="0">
+
+        <div class="controls">
+            <i class="fa-solid fa-backward" onclick="prevSong()"></i>
+            <i class="fa-solid fa-play" id="playBtn" onclick="playPause()"></i>
+            <i class="fa-solid fa-forward" onclick="nextSong()"></i>
+        </div>
+
+        <label>🔊 Volume</label>
+        <input type="range" min="0" max="1" step="0.01" value="1" class="slider" onchange="changeVolume(this.value)">
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>TANMO</h2>
+                <p>Your daily dose of music 🎶</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="music_player.html">Home</a>
+                <a href="albums.html">Albums</a>
+                <a href="favourites.html">Favourites</a>
+                <a href="playlists.html">Playlists</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Tanmo Music | Designed by Saqlain Ahmed
+        </div>
+    </footer>
+
+    <script src="music_player.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums | Tanmo Music</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="music_player.css">
+</head>
+
+<body>
+
+    <main class="headbar">
+
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="tanmo">
+            <h1>TANMO</h1>
+        </div>
+
+        <div class="navbar">
+            <ul>
+                <li><a href="music_player.html">Home</a></li>
+                <li><a href="albums.html">Albums</a></li>
+                <li><a href="favourites.html">Favourites</a></li>
+                <li><a href="playlists.html">Playlists</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="searchbar">
+            <input type="text" placeholder="Search music...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+    </main>
+
+    <div class="side-nav" id="sideNav">
+        <i class="fa-solid fa-xmark close-btn" onclick="toggleMenu()"></i>
+        <a href="music_player.html">Home</a>
+        <a href="albums.html">Albums</a>
+        <a href="favourites.html">Favourites</a>
+        <a href="playlists.html">Playlists</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <section class="music-container">
+        <h2>💿 Albums</h2>
+        <p>Explore albums by genre and artist.</p>
+
+        <ul class="music-list">
+            <li>NFAK Album</li>
+            <li>Turkish</li>
+            <li>Pushto</li>
+            <li>Balti</li>
+        </ul>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>TANMO</h2>
+                <p>Your daily dose of music 🎶</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="music_player.html">Home</a>
+                <a href="albums.html">Albums</a>
+                <a href="favourites.html">Favourites</a>
+                <a href="playlists.html">Playlists</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Tanmo Music | Designed by Saqlain Ahmed
+        </div>
+    </footer>
+
+    <script src="music_player.js"></script>
+</body>
+
+</html>
